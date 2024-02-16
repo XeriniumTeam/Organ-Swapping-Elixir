@@ -4,3 +4,7 @@ exports.getHomepage = (req, res) => {
         email: req.body.email
     });
 }
+
+exports.getSignupPage = (req, res) => {
+    res.render('signup');
+}

@@ -1,5 +1,5 @@
 const express = require("express");
-const exphbs = require("express-handlebars")
+const {engine} = require("express-handlebars")
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const userRoute = require("./routes/userRoutes");
@@ -15,7 +15,9 @@ mongoose.connection.on('connected', () => {
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-app.engine('handlebars', exphbs.engine());
+app.use(express.static('public'));
+
+app.engine('handlebars', engine({defaultLayout: false}));
 app.set('view engine', 'handlebars');
 
 app.use('/user', userRoute);

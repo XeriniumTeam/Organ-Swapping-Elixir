@@ -4,6 +4,6 @@ const indexCtrl = require("../controllers/indexController");
 
 router.get('/', indexCtrl.getHomepage);
 
-//router.get('/signup', indexCtrl.getSignupPage)
+router.get('/signup', indexCtrl.getSignupPage)
 
-module.exports = router
+module.exports = router;

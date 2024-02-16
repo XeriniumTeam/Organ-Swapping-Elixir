@@ -3,25 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/root.css"/>
+    <link rel="stylesheet" type="text/css" href="css/signup.css"/>
+    
     <title>Sign Up With Elixir</title>
 </head>
 <body>
-
-
-    <form id="signup-form">
-        <label for="first_name">First Name:</label>
-        <input type="text" id="first_name" name="first_name" required/>
-        <label for="last_name">Last Name:</label>
-        <input type="text" id="last_name" name="last_name" required/>
-        <label for="email_id">Email ID:</label>
-        <input type="text" id="email_id" name="email_id" required/>
-        <label for="pwd">Password:</label>
-        <input type="password" id="pwd" name="pwd" required/>
-        <label for="re_pwd">Retype Password:</label>
-        <input type="password" id="re_pwd" name="re_pwd" required />
+    <div id="app">
+        <div class="header">
+            <div class="logo-container">
+                <p class="logo-text">ELI<span style="color:red;">X</span>IR</p>
+            </div>
+        </div>
+        <p class="sign-up-slogan">Sign Up Now, Add Details Later...</p>
+        <form id="signup-form">
+            <label id="l_fname" for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required/>
+            <label id="l_lname" for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required/>
+            <label id="l_email" for="email_id">Email ID:</label>
+            <input type="text" id="email_id" name="email_id" required/>
+            <label id="l_pwd" for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd" required/>
+            <label id="l_re_pwd" for="re_pwd">Retype Password:</label>
+            <input type="password" id="re_pwd" name="re_pwd" required />
+            <button id="signupSubmit" type="submit">Submit</button>
+        </form>
         <div id="error-msg"></div>
-        <button type="submit" >Submit</button>
-    </form>
+    </div>
     <script src="js/signup.js"></script>
 </body>
 </html>
