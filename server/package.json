@@ -1,0 +1,28 @@
+{
+  "name": "elixir-organ-swapping",
+  "version": "1.0.0",
+  "description": "A System For Connecting Kidney Swapping Patients",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "organ",
+    "swapping",
+    "donor",
+    "medical",
+    "registry"
+  ],
+  "author": "TeamXerinium",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "mongoose": "^8.1.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.4",
+    "nodemon": "^3.0.3"
+  }
+}
