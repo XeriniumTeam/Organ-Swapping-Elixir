@@ -30,6 +30,22 @@ exports.createUser = async (req, res) => {
 
 exports.updateUser = async(req, res)=>{
     try{
+        const response = await User.updateOne({
+            Adhar_No: req.body.A_no,
+            Organ: req.body.Organ,
+            Age:req.body.age,
+            Blood_group:req.body.B_group,
+            Donor:[{
+                full_name: req.body.f_name, 
+                Age: req.body.age,
+                Adhar_No:req.body.A_no,
+                Organ:req.body.Organ,
+                Blood_group:req.body.B_group
+            }]
+        });
 
+    }
+    catch(error){
+        res.status(500).json({msg: error.message});
     }
 };
