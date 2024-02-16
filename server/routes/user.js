@@ -6,9 +6,11 @@ const userCtrl = require('../controllers/userController');
 router.get('/:email', userCtrl.getUserByEmail);
 
 //POST
-router.post('/newuser', userCtrl.createUser);
+router.post('/newUser', userCtrl.createUser);
+
 //UPDATE
-router.update('/update', userCtrl.updateUser)
+router.post('/updateUser', userCtrl.updateUser);
+
 //DELETE
 
 module.exports = router;

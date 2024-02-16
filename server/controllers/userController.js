@@ -16,12 +16,13 @@ exports.getUserByEmail = async (req, res) => {
 
 exports.createUser = async (req, res) => {
     try {
-        const response = await User.insertOne({
+        const response = await  new User({
             first_name: req.body.fname,
             last_name: req.body.lname,
             email_id : req.body.email,
             password: req.body.pwd
         });
+        console.log("User Added");
     }
     catch(error){
         res.status(500).json({msg : error.message});
@@ -30,7 +31,7 @@ exports.createUser = async (req, res) => {
 
 exports.updateUser = async(req, res)=>{
     try{
-        const response = await User.updateOne({
+        const response = await User.findByIdAndUpdate(req.body.email_id, {
             Adhar_No: req.body.A_no,
             Organ: req.body.Organ,
             Age:req.body.age,
@@ -42,7 +43,8 @@ exports.updateUser = async(req, res)=>{
                 Organ:req.body.Organ,
                 Blood_group:req.body.B_group
             }]
-        });
+        }, {new: true})
+        .then();
 
     }
     catch(error){
