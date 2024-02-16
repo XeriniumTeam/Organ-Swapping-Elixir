@@ -1,7 +1,9 @@
 const express = require("express");
+const exphbs = require("express-handlebars")
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const userRoute = require("./routes/user");
+const userRoute = require("./routes/userRoutes");
+const indexRoute = require("./routes/indexRoutes");
 const app = express();
 const PORT = 5000;
 
@@ -13,10 +15,11 @@ mongoose.connection.on('connected', () => {
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-app.get('/form', (req, res)=> {
-    res.status(200).sendFile(__dirname+'/views/signup.html')
-});
+app.engine('handlebars', exphbs.engine());
+app.set('view engine', 'handlebars');
+
 app.use('/user', userRoute);
+app.use('/', indexRoute);
 
 app.listen(PORT, ()=> {
     console.log(`Server is Connected On Port ${PORT}`);

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" type="text/css" href="css/root.css"/>
+    <link rel="stylesheet" type="text/css" href="css/homepage.css"/>
+
+    <title>Elixir : Kidney Swapping</title>
+</head>
+<body>
+    <div id="app">
+        <div class="header">
+            <div class="logo-container">
+                <p class="logo-text">ELI<span style="color:red;">X</span>IR</p>
+            </div>
+            {{#if email}}
+            <div class="dashboard-container">
+                <div class="open-dashboard">Open Dashboard</div>
+                <div class="sign-out">Sign Out</div>
+            </div>
+            {{else}}
+            <div class="signin-container">
+                <div class="sign-in"><span>Log In</span></div>
+                <a href="http://localhost:5000/signup" target="_self"><div class="sign-up"><span>Sign Up</span></div></a>
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</body>
+</html>
