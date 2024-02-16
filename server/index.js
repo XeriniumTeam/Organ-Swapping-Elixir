@@ -9,10 +9,15 @@ mongoose.connect("mongodb+srv://teamxerinium:teamx1234@cluster0.rw7nyz9.mongodb.
 mongoose.connection.on('connected', () => {
     console.log("Server Connected To MongoDB");
 })
-app.use(bodyParser.urlencoded({extended:false}));
+
+app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
+app.get('/form', (req, res)=> {
+    res.status(200).sendFile(__dirname+'/views/signup.html')
+});
 app.use('/user', userRoute);
+
 app.listen(PORT, ()=> {
     console.log(`Server is Connected On Port ${PORT}`);
 });

@@ -1,9 +1,10 @@
-const User = require('../models/userModel');
+const UserLogin = require('../models/userLoginModel');
+const UserRegistration = require('../models/userRegistrationModel');
 
 
 exports.getUserByEmail = async (req, res) => {
     try {
-        const user = await User.findById(req.params.email);
+        const user = await UserLogin.findById(req.params.email);
         if(!user){
             return res.status(404).json({msg: "User Not Found"});
         }
@@ -16,12 +17,17 @@ exports.getUserByEmail = async (req, res) => {
 
 exports.createUser = async (req, res) => {
     try {
-        const response = await  new User({
-            first_name: req.body.fname,
-            last_name: req.body.lname,
-            email_id : req.body.email,
-            password: req.body.pwd
+        const {first_name, last_name, email_id, pwd} = req.body;
+        // console.log(first_name+last_name+email_id+pwd);
+        const user = new UserLogin({
+            first_name: first_name,
+            last_name: last_name,
+            email_id: email_id,
+            pwd: pwd
         });
+        const savedUser = await user.save();
+        res.status(201).json(savedUser);
+        console.log(savedUser);
         console.log("User Added");
     }
     catch(error){
@@ -31,20 +37,7 @@ exports.createUser = async (req, res) => {
 
 exports.updateUser = async(req, res)=>{
     try{
-        const response = await User.findByIdAndUpdate(req.body.email_id, {
-            Adhar_No: req.body.A_no,
-            Organ: req.body.Organ,
-            Age:req.body.age,
-            Blood_group:req.body.B_group,
-            Donor:[{
-                full_name: req.body.f_name, 
-                Age: req.body.age,
-                Adhar_No:req.body.A_no,
-                Organ:req.body.Organ,
-                Blood_group:req.body.B_group
-            }]
-        }, {new: true})
-        .then();
+
 
     }
     catch(error){
