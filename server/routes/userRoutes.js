@@ -3,7 +3,7 @@ const router = express.Router();
 const userCtrl = require('../controllers/userController');
 
 //GET
-router.get('/:email', userCtrl.getUserByEmail);
+router.get('/email/:email', userCtrl.getUserByEmail);
 
 //POST
 router.post('/newUser', userCtrl.createUser);

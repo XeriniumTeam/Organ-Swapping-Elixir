@@ -1,18 +1,22 @@
 const loginForm = document.getElementById("loginForm");
 
+loginForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault;
-    loginForm.method = "POST";
     const email_id = document.getElementById("login_email").value;
 
-    fetch(`http://localhost:5000/user/${email_id}`, {
-        method: 'GET',
-        // headers: {
-        //     'Content-Type':'application/x-www-form-urlencoded'
-        // }
-    }).then((res) => {
-        console.log(res);
+    const response = await fetch(`http://localhost:5000/user/email/${email_id}`, {
+        method: 'GET'
     });
+
+    const data = await response.json();
+    
+    let pwd = data["pwd"];
+    let fname = data["first_name"];
+
+    if(pwd == document.getElementById("login_password").value){
+        window.location.href= `http://localhost:5000/account/${fname}`;
+        document.getElementById("login_email").value = "";
+        document.getElementById("login_password").value = "";
+    }
 })
