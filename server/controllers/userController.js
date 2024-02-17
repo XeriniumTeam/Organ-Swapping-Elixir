@@ -15,6 +15,10 @@ exports.getUserByEmail = async (req, res) => {
     }
 };
 
+exports.getUsersWithParams = async (req, res) => {
+    
+}
+
 exports.createUser = async (req, res) => {
     try {
         const {first_name, last_name, email_id, pwd} = req.body;
@@ -58,7 +62,7 @@ exports.createUserRegistration = async(req, res)=>{
         const savedUser = await user.save();
         res.status(201).json(savedUser);
         console.log(savedUser);
-        console.log("User Added");        
+        console.log("User Registered");        
     }
     catch(error){
         res.status(500).json({msg: error.message});
