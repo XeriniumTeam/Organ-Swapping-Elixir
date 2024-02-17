@@ -47,7 +47,6 @@ signupForm.addEventListener('submit', (e) => {
             // redirectWithParameters("http://localhost:5000/", {
                 
             fname =  document.getElementById("first_name").value;
-            console
             // })
             
             window.location.href= `http://localhost:5000/account/${fname}`;

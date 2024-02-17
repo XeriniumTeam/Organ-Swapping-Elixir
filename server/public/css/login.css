@@ -72,3 +72,12 @@ input {
     border: 2px solid black;
     border-radius:7px;
 }
+
+#error-msg {
+    color: red;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    padding: 50px;
+}

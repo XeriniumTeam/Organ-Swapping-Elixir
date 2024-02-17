@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
     organ: String,
     age:Number,
     bld_grp:String,
-    donor:[donorSchema]
+    donor: donorSchema
 });
 
 module.exports = mongoose.model('UserRegistration', userSchema);

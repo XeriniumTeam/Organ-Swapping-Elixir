@@ -7,9 +7,10 @@ router.get('/:email', userCtrl.getUserByEmail);
 
 //POST
 router.post('/newUser', userCtrl.createUser);
+router.post('/registerUser', userCtrl.createUserRegistration)
 
 //UPDATE
-router.post('/updateUser', userCtrl.updateUser);
+//router.post('/updateUser', userCtrl.updateUser);
 
 //DELETE
 
