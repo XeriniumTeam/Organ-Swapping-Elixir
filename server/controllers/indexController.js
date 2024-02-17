@@ -1,6 +1,6 @@
 exports.getHomepage = (req, res) => {
     res.render('homepage', {
-        name: req.body.name,
+        fname: req.body.fname,
         email: req.body.email
     });
 }
