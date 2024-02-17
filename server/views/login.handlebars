@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:5000/css/root.css"/>
+    <link rel="stylesheet" type="text/css" href="http://localhost:5000/css/login.css"/>
+
+    <title>Log In</title>
+</head>
+<body>
+    <div id="app">
+        <div class="header">
+            <div class="logo-container">
+                <p class="logo-text">ELI<span style="color:red; font-size: 60px;">X</span>IR</p>
+            </div>
+        </div>
+
+        <div class="login-slogan">Log In To Hope...</div>
+
+        <form id="loginForm">
+            <label for="login_email" id="l_login_email">Email ID:</label>
+            <input type="text" id="login_email" name="login_email" required/>
+
+            <label for="login_password" id="l_login_password">Password:</label>
+            <input type="password" id="login_password" name="login_password" required/>
+
+            <button type="submit" id="login-btn">Log In</button>       
+        </form>
+
+        <div id="error-msg"></div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>

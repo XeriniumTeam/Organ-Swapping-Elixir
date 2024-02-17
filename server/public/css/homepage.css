@@ -22,6 +22,11 @@
     font-size: 40px;
 }
 
+.logo-text span {
+    position:relative;
+    top:5px;
+}
+
 .signin-container {
     width: 200px;
     height: 70px;
@@ -32,7 +37,7 @@
 }
 
 .sign-in, .sign-up, .open-dashboard, .sign-out {
-    width:80px;
+    width:100px;
     height:40px;
     border: 3px black solid;
     border-radius: 5px;
@@ -50,4 +55,20 @@
     background-color: black;
     color:white;
     transition: 0.8s;
+}
+
+.name-wrapper {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+}
+
+.dashboard-container {
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }

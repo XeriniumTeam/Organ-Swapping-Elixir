@@ -1,25 +1,25 @@
 let signupForm = document.getElementById("signup-form");
 let ermsg = document.getElementById("error-msg");
 
-function redirectWithParameters(url, params){
-    console.log("reached here")
-    const form = document.createElement('form');
-    form.method = 'POST';
-    form.action = url
+// function redirectWithParameters(url, params){
+//     console.log("reached here")
+//     const form = document.createElement('form');
+//     form.method = 'POST';
+//     form.action = url
 
-    for(const key in params){
-        if(params.hasOwnProperty(key)){
-            const input = document.createElement('input')
-            input.type = 'hidden';
-            input.name = key;
-            input.value = params[key];
-            form.appendChild(input);
-        }
-    }
+//     for(const key in params){
+//         if(params.hasOwnProperty(key)){
+//             const input = document.createElement('input')
+//             input.type = 'hidden';
+//             input.name = key;
+//             input.value = params[key];
+//             form.appendChild(input);
+//         }
+//     }
 
-    document.body.appendChild(form);
-    form.submit();
-}
+//     document.body.appendChild(form);
+//     form.submit();
+// }
 
 signupForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -44,17 +44,18 @@ signupForm.addEventListener('submit', (e) => {
             }
         }).then((res) => {
             //document.getElementById("response").innerHTML = `<span>${res.body}</span>`;
-            redirectWithParameters("http://localhost:5000/", {
+            // redirectWithParameters("http://localhost:5000/", {
                 
-                fname: document.getElementById("first_name").value,
-                email: document.getElementById("email_id").value,
-
-            })
-            // document.getElementById("first_name").value = "";
-            // document.getElementById("last_name").value = "";
-            // document.getElementById("email_id").value = "";
-            // document.getElementById("pwd").value = "";
-            // document.getElementById("re_pwd").value = "";
+            fname =  document.getElementById("first_name").value;
+            console
+            // })
+            
+            window.location.href= `http://localhost:5000/account/${fname}`;
+            document.getElementById("first_name").value = "";
+            document.getElementById("last_name").value = "";
+            document.getElementById("email_id").value = "";
+            document.getElementById("pwd").value = "";
+            document.getElementById("re_pwd").value = "";
         }).catch((err) => {
             console.log(err)
         });
