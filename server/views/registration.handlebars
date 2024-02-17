@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:5000/css/registration.css"/>
+    <link rel="stylesheet" type="text/css" href="http://localhost:5000/css/root.css"/>
+</head>
+<body>
+    <div id="app">
+        <div class="header">
+            <div class="logo-container">
+                <p class="logo-text">ELI<span style="color:red; font-size: 60px;">X</span>IR</p>
+            </div>
+        </div>
+        <div class="registration-slogan">Register Here</div>
+        <form id="registrationForm">
+            <label for="donorFirstName" id="U_donorFirstName">Donor First Name:</label>
+            <input type="text" id="donorFirstName" name="donorFirstName" required>
+
+            <label for="donorAge" id="U_donorAge">Donor Age:</label>
+            <input type="number" id="donorAge" name="donorAge" required>
+
+            <label for="donorAadharCardNo" id="U_donorAdharCard">Donor Aadhar Card No:</label>
+            <input type="number" id="donorAadharCardNo" name="donorAadharCardNo" required>
+
+            <label for="donorOrgan" id="U_donorOrgan">Donor Organ:</label>
+            <input type="text" id="donorOrgan" name="donorOrgan" required>
+
+            <label for="donorBloodGroup" id="U_donorBloodGroup">Donor Blood Group:</label>
+            <input type="text" id="donorBloodGroup" name="donorBloodGroup" required>
+
+            <label for="emailId" id="U_emailId">Email ID:</label>
+            <input type="text" id="emailId" name="emailId" required>
+
+            <label for="aadharNo" id="U_aadharNo">Aadhar Card No:</label>
+            <input type="number" id="aadharNo" name="aadharNo" required>
+
+            <label for="organ" id="U_organ">Organ:</label>
+            <input type="text" id="organ" name="organ" required>
+
+            <label for="age"id="U_age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="bloodGroup" id="U_bloodGroup">Blood Group:</label>
+            <input type="text" id="bloodGroup" name="bloodGroup" required>
+
+            <button type="submit" id="U_register">Register</button>
+        </form>
+    </div>
+</body>
+</html>

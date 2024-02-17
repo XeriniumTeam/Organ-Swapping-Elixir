@@ -9,4 +9,6 @@ router.get('/signup', indexCtrl.getSignupPage);
 
 router.get('/login', indexCtrl.getLoginPage);
 
+router.get('/register', indexCtrl.getRegistrationPage);
+
 module.exports = router;
