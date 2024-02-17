@@ -5,9 +5,9 @@ const UserRegistration = require('../models/userRegistrationModel');
 exports.getUserByEmail = async (req, res) => {
     try {
         const user = await UserLogin.findOne({email_id : req.params.email});
-        if(!user){
-            return res.status(404).json({msg: "User Not Found"});
-        }
+        // if(!user){
+        //     return res.status(404).json({msg: "User Not Found"});
+        // }
         res.status(200).json(user);
     }
     catch(error) {
@@ -20,9 +20,9 @@ exports.getUsersWithParams = async (req, res) => {
     try {
         const {bld_grp, donor_bld_grp} = req.query;
         const users = await UserRegistration.find({bld_grp : donor_bld_grp, 'donor.donor_bld_grp': bld_grp});
-        if(!users){
-            return res.status(404).json({msg : "Users Not Found"})
-        }
+        // if(!users){
+        //     return res.status(404).json({msg : "Users Not Found"})
+        // }
         res.json(users);
     }
     catch(error) {

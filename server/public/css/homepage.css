@@ -28,7 +28,7 @@
 }
 
 .signin-container {
-    width: 22 0px;
+    width: 220px;
     height: 70px;
     display: flex;
     flex-direction: row;
@@ -85,6 +85,7 @@
 .para-1 {
     width: 50%;
     height:300px;
+    padding:10px;
 }
 
 .para-1 span {
@@ -99,5 +100,16 @@
     font-size: 15px;
     width:100%;
     display: block;
+    text-align: justify;
 
+}
+
+.img-1 {
+    width:50%;
+    height: 300px;
+    position: relative;
+    top:-300px;
+    left:50%;
+    padding:10px;
+    text-align:center;
 }

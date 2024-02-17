@@ -39,38 +39,47 @@
     grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto ;
     gap: 25px 20px;
     width: 700px;
-    }
+}
 
-    .registration-slogan {
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 40px;
-        padding: 50px;
-    }
+.registration-slogan {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    padding: 50px;
+}
 
-   
-    
-    #U_register {
-        position: relative;
-        top: 20px;
-        height:30px;
-        width:100px;
-        border-radius: 7px;
-        background-color: rgb(19, 232, 19);
-        color: white;
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size:20px;
-        border: none;
-    }
-    label {
-        height: 30px;
-    }
-    
-    input {
-        height: 30px;
-        border: 2px solid black;
-        border-radius:7px;
-    }
+
+
+#U_register {
+    position: relative;
+    top: 20px;
+    height:30px;
+    width:100px;
+    border-radius: 7px;
+    background-color: rgb(19, 232, 19);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:20px;
+    border: none;
+}
+label {
+    height: 30px;
+}
+
+input {
+    height: 30px;
+    border: 2px solid black;
+    border-radius:7px;
+}
+
+#error-msg {
+    color: red;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    padding: 50px;
+}
