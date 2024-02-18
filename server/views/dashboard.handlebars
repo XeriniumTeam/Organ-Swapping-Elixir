@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:5000/css/root.css"/>
+    <link rel="stylesheet" type="text/css" href="http://localhost:5000/css/dashboard.css"/>
+
+    <title>Dashboard</title>
+</head>
+<body>
+    <div id="app">
+        <div class="header">
+            <div class="logo-container">
+                <p class="logo-text">ELI<span style="color:red; font-size: 60px;">X</span>IR</p>
+            </div>
+            <div class="dashboard-container">
+                <div class="name-wrapper">Hi {{fname}}</div>
+                <div class="sign-out">Sign Out</div>
+            </div>
+        </div>
+        <div class="body-wrapper">
+            {{#unless data}}
+            <div id="registrationNotification"><span>Please Register Donor Details!!</span><a href="http://localhost:5000/register" target="_self"><button id="register-btn">Register Now</button></a></div>
+            {{/unless}}
+            <div class="banner">Swaps Available</div>
+            <div class="card-container" id="cardContainer">
+
+            </div>
+        </div>
+    </div>
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>

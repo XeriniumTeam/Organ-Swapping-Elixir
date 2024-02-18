@@ -30,9 +30,10 @@ loginForm.addEventListener('submit', async (e) => {
         
         let pwd = data["pwd"];
         let fname = data["first_name"];
+        let email = data["email_id"];
     
         if(pwd == document.getElementById("login_password").value){
-            window.location.href= `http://localhost:5000/account/${fname}`;
+            window.location.href= `http://localhost:5000/account/${fname}/${email}`;
             document.getElementById("login_email").value = "";
             document.getElementById("login_password").value = "";
         }

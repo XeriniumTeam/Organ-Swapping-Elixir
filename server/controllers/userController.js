@@ -11,9 +11,19 @@ exports.getUserByEmail = async (req, res) => {
         res.status(200).json(user);
     }
     catch(error) {
-        res.status(500).json({err: error.message});
+        res.status(500).json({msg: error.message});
     }
 };
+
+exports.getUserRegByEmail = async (req, res) => {
+    try {
+        const user = await UserRegistration.findOne({email_id : req.params.email});
+        res.status(200).json(user);
+    }
+    catch(error){
+        res.status(500).json({msg: error.message});
+    }
+}
 
 exports.getUsersWithParams = async (req, res) => {
 
