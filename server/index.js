@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const userRoute = require("./routes/userRoutes");
 const indexRoute = require("./routes/indexRoutes");
+const apiRoute = require("./routes/apiRoutes");
 const app = express();
 const PORT = 5000;
 
@@ -22,6 +23,7 @@ app.set('view engine', 'handlebars');
 
 app.use('/user', userRoute);
 app.use('/', indexRoute);
+app.use('/api', apiRoute);
 
 app.listen(PORT, ()=> {
     console.log(`Server is Connected On Port ${PORT}`);
