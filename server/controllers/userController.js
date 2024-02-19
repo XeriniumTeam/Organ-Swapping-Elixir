@@ -28,7 +28,7 @@ exports.getUserRegByEmail = async (req, res) => {
 exports.getUsersWithParams = async (req, res) => {
 
     try {
-        const {bld_grp, donor_bld_grp} = req.query;
+        const {bld_grp, donor_bld_grp} = req.params;
         const users = await UserRegistration.find({bld_grp : donor_bld_grp, 'donor.donor_bld_grp': bld_grp});
         // if(!users){
         //     return res.status(404).json({msg : "Users Not Found"})

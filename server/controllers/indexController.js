@@ -61,7 +61,8 @@ exports.getDashboardPage = async (req, res) => {
                     donor_fname: "NA",
                     donor_aadhar: "NA",
                     donor_age: "NA",
-                    donor_bld_grp: "NA"
+                    donor_bld_grp: "NA",
+                    data: data
                 })
             }
         }
