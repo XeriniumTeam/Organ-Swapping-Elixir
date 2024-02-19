@@ -70,41 +70,106 @@
     height: calc(100vh - 80px - 16em);
 }
 
+.dashboard-details {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.detail-box {
+    width: 60%;
+    height: 95%;
+    margin: 10px 0 ; 
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border-radius:10px;
+    background: linear-gradient(168deg, rgba(255,255,255,1) 0%, rgba(158,255,115,1) 100%);
+}
+
+.details {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    gap : 20px 10px;
+    
+}
+
+.update-details-box {
+    width: 35%;
+    height: 95%;
+    background-color: rgb(157, 255, 96);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border-radius: 10px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.update-details-text {   
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 45px;
+
+    color:  white;
+    text-align: center;
+
+}
+
+.details span {
+    display: block;
+}
+
+.details .heading {
+    font-weight: 600;
+    font-size: 25px;
+    
+}
+
 #registrationNotification {
     width: 100%;
-    height: 100px;
-    background-color:rgb(238, 149, 149);
-    color:rgb(243, 243, 243);
+    height: 50px;
+    color:rgb(245, 38, 38);
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     border-radius:5px;
     margin-bottom: 20px;
 }
 
 #registrationNotification span {
     display : block;
-    padding: 5px 10px;
-    font-size: 40px;
+    padding: 5px 10px 5px 0;
+    font-size: 20px;
 }
 
 #register-btn {
-    height: 60px;
-    width: 200px;
+    height: 30px;
+    width: 90px;
     padding:5px;
-    font-size: 30px;
+    font-size: 20px;
     background-color: rgb(19, 232, 19);
     color: white;
     border: none;
-    border-radius: 5px
+    border-radius: 5px;
+    cursor:pointer;
 }
 
 .banner {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
-    font-size: 30px;
+    font-size: 20px;
 }

@@ -47,9 +47,10 @@ signupForm.addEventListener('submit', (e) => {
             // redirectWithParameters("http://localhost:5000/", {
                 
             fname =  document.getElementById("first_name").value;
+            email = document.getElementById("email_id").value;
             // })
             
-            window.location.href= `http://localhost:5000/account/${fname}`;
+            window.location.href= `http://localhost:5000/account/${fname}/${email}`;
             document.getElementById("first_name").value = "";
             document.getElementById("last_name").value = "";
             document.getElementById("email_id").value = "";

@@ -17,20 +17,44 @@
             </div>
             <div class="dashboard-container">
                 <div class="name-wrapper">Hi {{fname}}</div>
-                <div class="sign-out">Sign Out</div>
+                <a href="http://localhost:5000/"><div class="sign-out">Sign Out</div></a>
             </div>
         </div>
         <div class="body-wrapper">
-            {{#unless data}}
-            <div id="registrationNotification"><span>Please Register Donor Details!!</span><a href="http://localhost:5000/register" target="_self"><button id="register-btn">Register Now</button></a></div>
-            {{/unless}}
-            <div class="banner">Swaps Available</div>
-            <div class="card-container" id="cardContainer">
+            <div class="dashboard-details">
+                <div class="detail-box">
+                    <div class="details">
+                        <span class="heading" style="grid-row: 1/2; grid-column: 1/2;">Recipient Details</span>
+                        <span class="info" style="grid-row: 2/3; grid-column: 1/2;">Name : {{fname}} {{lname}}</span>
+                        <span class="info" id="spanEmailID" style="grid-row: 3/4; grid-column: 1/2;">Email ID: {{email_id}}</span>
+                        <span class="info" style="grid-row: 4/5; grid-column: 1/2;">Aadhar Card No: {{aadhar_no}}</span>
+                        <span class="info" style="grid-row: 5/6; grid-column: 1/2;">Blood Group: {{bld_grp}}</span>
 
+                        <span class="heading" style="grid-row: 1/2; grid-column: 2/3;">Donor Details</span>
+                        <span class="info" style="grid-row: 2/3; grid-column: 2/3;">Name : {{donor_fname}}</span>
+                        <span class="info" style="grid-row: 3/4; grid-column: 2/3;">Aadhar Card No: {{donor_aadhar}}</span>
+                        <span class="info" style="grid-row: 4/5; grid-column: 2/3;">Age : {{donor_age}}</span>
+                        <span class="info" style="grid-row: 5/6; grid-column: 2/3;">Blood Group: {{donor_bld_grp}}</span>
+                    </div>
+                </div>
+                {{#if data}}
+                <div class="update-details-box">
+                    <span class="update-details-text">Update Details</span>
+                </div>
+                {{/if}}
+            </div>
+            <div class="secondary-detail-box">
+                {{#unless data}}
+                <div id="registrationNotification"><span>Please Register Donor Details!!</span><a href="http://localhost:5000/register" target="_self"><button id="register-btn">Register Now</button></a></div>
+                {{/unless}}
+                <div class="banner">Swaps Available</div>
+                <div class="card-container" id="cardContainer">
+
+                </div>
             </div>
         </div>
     </div>
-    <script src="js/dashboard.js"></script>
+    <script src="http://localhost:5000/js/dashboard.js"></script>
 
 </body>
 </html>
