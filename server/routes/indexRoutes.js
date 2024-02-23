@@ -13,4 +13,6 @@ router.get('/register', indexCtrl.getRegistrationPage);
 
 router.get('/dashboard/:fname/:email', indexCtrl.getDashboardPage);
 
+router.get('/hlaForm', indexCtrl.getHlaForm);
+
 module.exports = router;

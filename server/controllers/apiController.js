@@ -29,7 +29,6 @@ const jsonData = {
             }
         }
     },
-
     "family_2" : {
         "donor":{
             "name":"Vinita",
@@ -67,7 +66,6 @@ exports.getHLACompatibility = async (req, res) => {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(jsonData)
     })
 
     const data = await response.json()

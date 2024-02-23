@@ -1,0 +1,61 @@
+<form action="http://localhost:5000/api/hla" method="post">
+
+<input type="hidden" id="familyId" name="familyId" value="family_1">
+<h3>Recipient Details:</h3>
+<input type="text" id="recipientEmail" name="recipientEmail" placeholder="Recipient Email" required>
+<h4>Genes:</h4>
+{{#each genesRecipient}}
+<label for="recipientGenes_{{@key}}">{{@key}}:</label>
+<input type="text" id="recipientGenes_{{@key}}_1" name="recipient[genes][{{@key}}][]" placeholder="Allele 1" required>
+<input type="text" id="recipientGenes_{{@key}}_2" name="recipient[genes][{{@key}}][]" placeholder="Allele 2" required>
+{{/each}}
+<h3>Donor Details:</h3>
+<input type="text" id="donorName" name="donor[name]" placeholder="Donor Name" required>
+<h4>Genes:</h4>
+{{#each genesDonor}}
+<label for="donorGenes_{{@key}}">{{@key}}:</label>
+<input type="text" id="donorGenes_{{@key}}_1" name="donor[genes][{{@key}}][]" placeholder="Allele 1" required>
+<input type="text" id="donorGenes_{{@key}}_2" name="donor[genes][{{@key}}][]" placeholder="Allele 2" required>
+{{/each}}
+
+    
+    <button type="submit">Submit</button>
+</form>
+
+<<<<<<<<<<<<<<  ✨ Codeium Command ⭐ >>>>>>>>>>>>>>>>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HLA Matching Form</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:5000/css/hla.css"/>
+    <link rel="stylesheet" type="text/css" href="http://localhost:5000/css/root.css"/>
+</head>
+<body>
+    <div id="app">
+        <form action="http://localhost:5000/api/hla" method="post">
+            <input type="hidden" id="familyId" name="familyId" value="family_1">
+            <h3>Recipient Details:</h3>
+            <input type="text" id="recipientEmail" name="recipientEmail" placeholder="Recipient Email" required>
+            <h4>Genes:</h4>
+            {{#each genesRecipient}}
+            <label for="recipientGenes_{{@key}}">{{@key}}:</label>
+            <input type="text" id="recipientGenes_{{@key}}_1" name="recipient[genes][{{@key}}][]" placeholder="Allele 1" required>
+            <input type="text" id="recipientGenes_{{@key}}_2" name="recipient[genes][{{@key}}][]" placeholder="Allele 2" required>
+            {{/each}}
+            <h3>Donor Details:</h3>
+            <input type="text" id="donorName" name="donor[name]" placeholder="Donor Name" required>
+            <h4>Genes:</h4>
+            {{#each genesDonor}}
+            <label for="donorGenes_{{@key}}">{{@key}}:</label>
+            <input type="text" id="donorGenes_{{@key}}_1" name="donor[genes][{{@key}}][]" placeholder="Allele 1" required>
+            <input type="text" id="donorGenes_{{@key}}_2" name="donor[genes][{{@key}}][]" placeholder="Allele 2" required>
+            {{/each}}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="http://localhost:5000/js/hla.js"></script>
+</body>
+</html>
+<<<<<<<  4cc7681c-b334-4c09-b194-f2b13469642f  >>>>>>>
